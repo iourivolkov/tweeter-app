@@ -68,7 +68,7 @@ $(document).ready(function() {
   return $tweet;
   }
   
-  // function to render tweet & prepend to prev. tweets 
+  // function to render tweet & prepend (add to top of list) to prev. tweets 
   const renderTweets = function(tweets) {
     let $tweets = $('.previous-tweets');
   
@@ -83,17 +83,25 @@ $(document).ready(function() {
   $('form').on("submit", function(event) {
     // prevent default form submission behaviour (page refresh)
     event.preventDefault();
-    // console.log("success! refresh prevented");
-    // above message prints to the console in the browser
 
-    // if no text in textarea, alert user that there's not text 
+    // if no text in textarea, alert user that there's no text 
     if($("#tweet-text").val().length === 0) {
-      alert("Error: No text in body!");
+      $('#error').slideDown("slow", function() {
+        $('#errVisible').html("Error: The textarea is empty!");
+      });
+      setTimeout(() => {
+        $('#error').slideUp("slow")
+      }, 2500);
       return;
     }
     // if characters exceed 140, alert user that tweet is too long
     if($("#tweet-text").val().length > 140) {
-      alert("Error: This tweet is too long!");
+      $('#error').slideDown("slow", function() {
+        $('#errVisible').html("Error: Character Limit Exceeded!");
+      });
+      setTimeout(() => {
+        $('#error').slideUp("slow")
+      }, 2500);
       return;
     }
 
