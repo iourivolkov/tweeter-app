@@ -1,0 +1,43 @@
+/* CSS for Navigation Bar */
+
+.navigation {
+  height: 120px;
+  color: #FFFFFF;
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  background-color: #0288d1;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");   
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  
+}
+
+.navigation-logo {
+  font-family: bungee;
+  height: 60px;
+  font-size: 35px;
+  margin: 35px;
+ 
+}
+
+.navigation-nav {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  font-weight: 300px;
+  margin: 35px;
+
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  color: red
+}
+
+.header {
+  margin-top: 120px;
+}
+

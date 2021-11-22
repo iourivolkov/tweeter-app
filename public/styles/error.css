@@ -1,0 +1,23 @@
+/* used to style the error message */
+
+
+#errVisible {
+
+  opacity: 1;
+  visibility: visible;
+
+  background:rgb(204, 96, 82);
+  font-size: 15px;
+  color: white;
+  font-family: 'Source Sans Pro';
+  font-weight: bold;
+  top: 900px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 70%;
+  padding: 0px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(223, 37, 37, 0.5); 
+}
