@@ -33,6 +33,13 @@ const tweetData = [
 
 $(document).ready(function() {
 
+  // escape function to prevent XSS attacks 
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // function to create a DOM element from tweetData object
   const createTweetElement = function(tweet){
 
@@ -45,7 +52,7 @@ $(document).ready(function() {
      <p class="tweeter-handle">${tweet.user.handle}</p>
     </header>
     <div class="tweet-content">
-     <p class="tweet-text">${tweet.content.text}</p>
+     <p class="tweet-text">${escape(tweet.content.text)}</p> 
     </div>
     <footer class="tweet-footer">
      <p class="post-date">
