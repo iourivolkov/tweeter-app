@@ -81,7 +81,7 @@ $(document).ready(function() {
 
     // if no text in textarea, alert user that there's not text 
     if($("#tweet-text").val().length === 0) {
-      alert("Error: No text in body.");
+      alert("Error: No text in body!");
       return;
     }
     // if characters exceed 140, alert user that tweet is too long
@@ -90,13 +90,18 @@ $(document).ready(function() {
       return;
     }
 
-
-    
     $.ajax({
       type: "POST",
       url: "http://localhost:8080/tweets",
-      data: $(this).serialize()
-    }); // above request fails 
+      data: $(this).serialize(),
+      success: function() {
+        // converts jquery elem to js and resets the form once tweet has been successfully submitted 
+        $('.container .new-tweet form')[0].reset();
+        // resets counter to 140 characters
+        $('.counter').text(140);
+        loadTweets();
+      }
+    })
   });
   
   // function responsible for fetching tweets from tweets page
