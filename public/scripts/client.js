@@ -3,8 +3,9 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// Fake data taken from initial-tweets.json
 
+
+// Fake data taken from initial-tweets.json
 const tweetData = [
 //   {
 //     "user": {
@@ -30,10 +31,10 @@ const tweetData = [
 //   }
 ]
 
-
+// function ensures DOM is loaded before js is run - allows js code to be kept in the head of the html
 $(document).ready(function() {
 
-  // escape function to prevent XSS attacks 
+  // escape function to prevent XSS (cross-scripting) attacks 
   const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -89,9 +90,10 @@ $(document).ready(function() {
       $('#error').slideDown("slow", function() {
         $('#errVisible').html("Error: The textarea is empty!");
       });
+      // add setTimeout for 3s to hide error message once user has acknowledged it 
       setTimeout(() => {
         $('#error').slideUp("slow")
-      }, 2500);
+      }, 3000);
       return;
     }
     // if characters exceed 140, alert user that tweet is too long
@@ -101,7 +103,7 @@ $(document).ready(function() {
       });
       setTimeout(() => {
         $('#error').slideUp("slow")
-      }, 2500);
+      }, 3000);
       return;
     }
 
