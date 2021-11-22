@@ -1,0 +1,83 @@
+/* CSS section for list of posted tweets */
+
+.tweet {
+  border: 3px solid grey;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tweet .tweet-header {
+  height: 100%;
+  width: 95%;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tweet .tweet-header .avatar {
+  display: flex;
+  flex-direction: row;
+}
+
+.tweet-text {
+  align-self: flex-end;
+}
+
+.username {
+  color: black;
+}
+
+.tweet .tweeter-icon {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+.tweet .tweet-header .tweeter-handle {
+  font-style: normal;
+  float: right;
+  font-size: 18px;
+}
+
+.tweet .tweet-footer {
+  height: 35px;
+  width: 95%;
+  padding: 5px;
+  border-top: 3px solid grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: inherit;
+
+}
+
+.tweet .tweet-footer .post-date {
+  font-size: 12px;
+}
+
+.fa-flag:hover{
+  cursor: pointer;
+  color:  darkgoldenrod !important;
+
+}
+
+.fa-retweet:hover{
+  cursor: pointer;
+  color: darkgoldenrod !important;
+
+}
+
+.fa-heart:hover{
+  cursor: pointer;
+  color: darkgoldenrod !important;
+
+}
+
+.previous-tweets .tweet:hover {
+  box-shadow: 2px 3px 2px rgba(31, 25, 143, 0.5);
+}
+
