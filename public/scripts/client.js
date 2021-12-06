@@ -124,9 +124,8 @@ $(document).ready(function() {
   // function responsible for fetching tweets from tweets page
   const loadTweets = function() {
     $.ajax({
-      type: "GET",
-      url: "http://localhost:8080/tweets",
-      dataType: "json",
+      method: "GET",
+      url: "/tweets",
       success: function(data){
         // if get req succeeds --> render tweets 
         renderTweets(data);
