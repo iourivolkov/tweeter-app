@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/previous-tweets.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/error.css" type="text/css"/>
-    <link rel="stylesheet" href="/styles/responsiveDesign.css" type="text/css"/>
     
 
      <!-- External JS -->
@@ -78,8 +77,7 @@
       <section class="new-tweet">
         <h2 class="tweet-heading">Compose Tweet</h2>
         <form method="POST" action="/tweets/" class="form">
-          <label for="tweet-text" class="tweet-text-header">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="container-for-tweet-and-counter">
             <button type="submit" class="tweet-button">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>

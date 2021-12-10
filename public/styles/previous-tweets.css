@@ -22,8 +22,9 @@
   flex-direction: row;
 }
 
-.tweet-text {
-  align-self: flex-end;
+.tweet-content, .tweet-text {
+  align-self: flex-start;
+  margin-left: 20px;
 }
 
 .username {
@@ -80,4 +81,6 @@
 .previous-tweets .tweet:hover {
   box-shadow: 2px 3px 2px rgba(31, 25, 143, 0.5);
 }
+
+
 

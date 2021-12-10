@@ -4,34 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const tweetData = [];
 
-// Fake data taken from initial-tweets.json
-const tweetData = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd" },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-]
-
-// function ensures DOM is loaded before js is run - allows js code to be kept in the head of the html
 $(document).ready(function() {
 
   // escape function to prevent XSS (cross-scripting) attacks 
@@ -68,7 +42,7 @@ $(document).ready(function() {
   </article>`
   return $tweet;
   }
-  
+
   // function to render tweet & prepend (add to top of list) to prev. tweets 
   const renderTweets = function(tweets) {
     let $tweets = $('.previous-tweets');
@@ -77,10 +51,10 @@ $(document).ready(function() {
       $tweets.prepend(createTweetElement(tweet));
     });
   };
-  // call the render tweets function 
+  //call the render tweets function 
   renderTweets(tweetData);
-  
-  
+
+
   $('form').on("submit", function(event) {
     // prevent default form submission behaviour (page refresh)
     event.preventDefault();
@@ -121,6 +95,7 @@ $(document).ready(function() {
     })
   });
   
+
   // function responsible for fetching tweets from tweets page
   const loadTweets = function() {
     $.ajax({
@@ -128,11 +103,10 @@ $(document).ready(function() {
       url: "/tweets",
       success: function(data){
         // if get req succeeds --> render tweets 
-        renderTweets(data);
+       renderTweets(data);
       }
     });
   };
-  loadTweets();
 });
 
 
