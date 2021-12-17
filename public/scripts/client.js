@@ -45,14 +45,21 @@ $(document).ready(function() {
 
   // function to render tweet & prepend (add to top of list) to prev. tweets 
   const renderTweets = function(tweets) {
-    let $tweets = $('.previous-tweets');
+    $('.previous-tweets').empty();
+    // let $tweets = $('.previous-tweets');
   
     tweets.forEach(function(tweet) {
-      $tweets.prepend(createTweetElement(tweet));
+      // append --> disp in reverse chronological order (last to first)
+      let $tweetElement = createTweetElement(tweet);
+
+      $('.previous-tweets').prepend(createTweetElement(tweet));
     });
   };
+
   //call the render tweets function 
-  renderTweets(tweetData);
+  // renderTweets(tweetData);
+
+
 
 
   $('form').on("submit", function(event) {
@@ -102,11 +109,15 @@ $(document).ready(function() {
       method: "GET",
       url: "/tweets",
       success: function(data){
+        console.log("data", data);
         // if get req succeeds --> render tweets 
        renderTweets(data);
       }
     });
   };
+  loadTweets();
 });
 
-
+// load tweets at start
+// if loadtweet funciton = false, inside run loadtweets,
+// after loads set loadtweets to true, once set - shouldnt run again 

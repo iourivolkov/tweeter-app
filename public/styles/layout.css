@@ -27,7 +27,6 @@ body {
 
 body {
   font-family: 'Source Sans Pro', sans-serif; 
- 
 }
 
 main {
@@ -38,13 +37,13 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: auto;
-  
+  margin: auto; 
 }
 
-.main-header {
-  font-size: 25px;
-}
+
+
+
+
 
 
 
