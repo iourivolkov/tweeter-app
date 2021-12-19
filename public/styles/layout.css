@@ -45,25 +45,24 @@ body {
   @media screen and (min-width: 1024px) {
 
     .desktop-responsive {
-      border: solid blue;
       display: flex;
       flex-direction: row;
     }
 
-  .desktop-responsive #header-desktop {
-    border: solid orange;
+    .header, #header-desktop {
     margin: 230px 220px 60px 60px;
     display: flex;
     align-items: center;
-  }
+    }
 
-  #desktop-container {
-    border: solid red;
+
+    #desktop-container {
     margin: 230px 60px 40px 0px;
-  }
-    
+    }
 
-
+    .username-header, h2 {
+      align-self: center;
+    }
   }
   
 
