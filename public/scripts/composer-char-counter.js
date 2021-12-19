@@ -14,9 +14,6 @@ $(document).ready(function() {
   })
 })
 
-// addClass / removeClass for css 
-// or toggleClass 
-
 
 
 
