@@ -52,7 +52,7 @@ $(document).ready(function() {
       // append --> disp in reverse chronological order (last to first)
       let $tweetElement = createTweetElement(tweet);
 
-      $('.previous-tweets').append(createTweetElement(tweet));
+      $('.previous-tweets').prepend(createTweetElement(tweet));
     });
   };
 
