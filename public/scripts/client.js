@@ -118,6 +118,3 @@ $(document).ready(function() {
   loadTweets();
 });
 
-// load tweets at start
-// if loadtweet funciton = false, inside run loadtweets,
-// after loads set loadtweets to true, once set - shouldnt run again 
