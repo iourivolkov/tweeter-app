@@ -1,7 +1,7 @@
 /* CSS section for list of posted tweets */
 
 
-
+/* Style applies to mobile and desktop screen sizes */
 .tweet {
   border: 3px solid grey;
   margin-top: 2em;

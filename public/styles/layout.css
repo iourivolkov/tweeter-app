@@ -41,7 +41,7 @@ body {
   }
 
 
-
+/* desktop screen size, mobile screen design by default  */
   @media screen and (min-width: 1024px) {
 
     .desktop-responsive {
