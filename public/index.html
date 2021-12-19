@@ -55,8 +55,11 @@
       </div>
     </nav>
 
+
+    <div class="desktop-responsive">
     <!-- Top header bar -->
-    <header class="header">
+    <header class="header" id="header-desktop">
+      <div class="profile">
       <div>
           <img class="header-avatar" src="/images/profile-hex.png"> 
       </div>
@@ -64,10 +67,11 @@
       <div class="username-header">
           <h2>Jane Smith</h2>
       </div>
+      </div>
    </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main class="container" id="desktop-container">
 
       <!-- HTML for error message  -->
       <section id="error">
@@ -75,8 +79,8 @@
       </section>
 
       <!-- Section to compose a new tweet -->
-      <section class="new-tweet">
-        <h2 class="tweet-heading">Compose Tweet</h2>
+      <section class="new-tweet" id="tweets-desktop">
+        <!-- <h2 class="tweet-heading">Compose Tweet</h2> -->
         <form method="POST" action="/tweets/" class="form">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="container-for-tweet-and-counter">
@@ -86,33 +90,11 @@
         </form>
 
         <!-- Section containing previous tweets from most recent to oldest -->
-        <section class="previous-tweets">
-          <!-- <article class="tweet">
-            <header class="tweet-header">
-              <div class="avatar">
-               <img class="tweeter-icon" src="https://i.imgur.com/73hZDYK.png">
-               <p class="username"></p>
-              </div>
-             <p class="tweeter-handle"></p>
-            </header>
-            <div class="tweet-content">
-              <p class="tweet-text">
-              </p>
-            </div>
-            <footer class="tweet-footer">
-             <p class="post-date">
-              
-             </p>
-             <div class="footer-icons">
-             <i class="fas fa-flag"></i>
-             <i class="fas fa-retweet"></i>
-             <i class="fas fa-heart"></i>
-            </div>
-            </footer>
-          </article> -->
+        <section class="previous-tweets" id="posted-tweets">
         </section>
       </section>
     </main>
+    </div>
   </body>
 </html>
 

@@ -1,47 +1,107 @@
 /* CSS for tweet composition section */
 
-.form {
- display: flex;
- flex-direction: column;
- padding-top: 1%;
+/* For mobile screens  */
+@media screen and (max-width: 1023px) {
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+    margin-top: 40px;
+   }
+   
+   #tweet-text {
+    background-color: transparent;
+    color:black;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid grey 2px;
+    padding: 1px;
+   }
+   
+   .tweet-button {
+     font-family: 'Bungee';
+     color: white;
+     background: navy;
+     border-radius: 10%;
+   }
+   
+   .counter {
+     font-family: 'Bungee';
+   }
+   
+   .container-for-tweet-and-counter {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     padding-top: 1%;
+   }
+   
+   .tweet-heading {
+     font-family: 'Bungee';
+     font-size: 15px;
+     padding-top: 10px;
+   }
+   
+   .tweet-text-header {
+     align-self: baseline;
+   }
+   
 }
 
-#tweet-text {
- background-color: transparent;
- color:black;
- outline: none;
- outline-style: none;
- border-top: none;
- border-left: none;
- border-right: none;
- border-bottom: solid grey 2px;
- padding: 1px;
+/* For desktop screens */
+@media screen and (min-width: 1024px) {
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+   }
+   
+   #tweet-text {
+    background-color: transparent;
+    color:black;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid grey 2px;
+    padding: 1px;
+   }
+   
+   .tweet-button {
+     font-family: 'Bungee';
+     color: white;
+     background: navy;
+     border-radius: 10%;
+   }
+   
+   .counter {
+     font-family: 'Bungee';
+   }
+   
+   .container-for-tweet-and-counter {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     padding-top: 1%;
+   }
+   
+   .tweet-heading {
+     font-family: 'Bungee';
+     font-size: 15px;
+     padding-top: 10px;
+   }
+   
+   .tweet-text-header {
+     align-self: baseline;
+   }
+   
+
 }
 
-.tweet-button {
-  font-family: 'Bungee';
-  color: white;
-  background: navy;
-  border-radius: 10%;
-}
 
-.counter {
-  font-family: 'Bungee';
-}
-
-.container-for-tweet-and-counter {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-top: 1%;
-}
-
-.tweet-heading {
-  font-family: 'Bungee';
-  font-size: 15px;
-  padding-top: 10px;
-}
-
-.tweet-text-header {
-  align-self: baseline;
-}

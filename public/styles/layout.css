@@ -25,20 +25,48 @@ body {
  */
 
 
-body {
-  font-family: 'Source Sans Pro', sans-serif; 
-}
+  body {
+    font-family: 'Source Sans Pro', sans-serif; 
+  }
+  
+  main {
+    background-color: #f4f1ec;
+    width: 90%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto; 
+  }
 
-main {
-  background-color: #f4f1ec;
-  width: 90%;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: auto; 
-}
+
+
+  @media screen and (min-width: 1024px) {
+
+    .desktop-responsive {
+      border: solid blue;
+      display: flex;
+      flex-direction: row;
+    }
+
+  .desktop-responsive #header-desktop {
+    border: solid orange;
+    margin: 230px 220px 60px 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  #desktop-container {
+    border: solid red;
+    margin: 230px 60px 40px 0px;
+  }
+    
+
+
+  }
+  
+
 
 
 

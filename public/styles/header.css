@@ -1,23 +1,57 @@
-.header {
-  height: 400px;
-  width: 100%;
-  color: bisque;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  background-color: #0288d1;
-  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png"); 
+/* mobile screen responsive design  */
+@media screen and (max-width: 1023px) {
+
+  .header {
+    height: 400px;
+    width: 100%;
+    color: bisque;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0288d1;
+    background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png"); 
+  }
+   
+  .username-header {
+    color: whitesmoke;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 300px;
+  }
+
+}
+
+
+/* desktop screen responsive design  */
+
+@media screen and (min-width: 1024px){
+
+  .header {
+    height: 400px;
+    width: 100%;
+    color: bisque;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0288d1;
+    background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png"); 
+  }
+   
+  .username-header {
+    color: whitesmoke;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 300px;
+  }
+
+
+
 }
  
-.username-header {
-  color: whitesmoke;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 20px;
-  font-weight: 300px;
-}
+  
 
+  
 
-
-
-
+  
